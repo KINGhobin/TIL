@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="{%url 'articles:new' %}" method="POST">
+  {% csrf_token %}
+  Title : <input type="text" name="title" id="">
+  <br>
+  Content : <Textarea name="content">
+  </Textarea>
+  <br>
+  <button>제출</button>
+</form>
+
+
+{% endblock %}

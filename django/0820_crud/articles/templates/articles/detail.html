@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Detail Page</h1>
+<p>제목 : {{ article.title }}</p>
+<p>내용 : {{ article.content }}</p>
+
+<a href="{% url 'articles:edit' article.pk %}">수정하기</a>
+<a href="{% url 'articles:del' article.pk %}">삭제하기</a>
+{% endblock %}
